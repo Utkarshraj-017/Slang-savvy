@@ -96,13 +96,28 @@ class GenerativeAI:
         6. **Tone**: Whether it's positive, negative, or neutral
         
         """
+
+        small_prompt = f"""
+        You are SlangSavvy, an expert urban slang decoder. Please provide a one line explanation for the slang term: "{slang_term}"
+
+        Please include:
+        1. **Definition**: Clear, concise meaning of the term
+        2. **Origin**: Where/when this slang originated (if known)
+        3. **Usage Examples**: 2-3 realistic examples showing how it's used
+        4. **Context**: What platforms/communities commonly use this term
+        5. **Variations**: Any alternative spellings or related terms
+        6. **Tone**: Whether it's positive, negative, or neutral
+    
+        """
         
         if context:
             base_prompt += f"\nAdditional context: The user encountered this term in: {context}"
+            small_prompt += f"\nAdditional context: The user encountered this term in: {context}"
         
         base_prompt += "\nPlease format your response in a clear, engaging way that helps someone understand and use this slang appropriately."
+        small_prompt += "\nPlease format your response in a clear, engaging way that helps someone understand and use this slang appropriately."
         
-        return base_prompt
+        return small_prompt
     
     def get_slang_explanation(self, slang_term: str, context: str = "") -> Optional[str]:
         """
@@ -320,4 +335,3 @@ GEMINI_API_KEY=your_api_key_here
 
 if __name__ == "__main__":
     main()
-    
