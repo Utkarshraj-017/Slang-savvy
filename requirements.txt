@@ -1,0 +1,41 @@
+# SlangSavvy - Urban Slang Decoder Requirements
+# Core Dependencies
+
+# Streamlit - Web framework for the UI
+streamlit>=1.28.0
+
+# Google Generative AI - For Gemini API integration
+google-generativeai>=0.3.0
+
+# Python-dotenv - For loading environment variables from .env file
+python-dotenv>=1.0.0
+
+# Optional but recommended for better performance
+# These are typically included with Python but adding for completeness
+
+# Typing extensions for better type hints (usually included)
+typing-extensions>=4.0.0
+
+# Requests - HTTP library (dependency of google-generativeai)
+requests>=2.31.0
+
+# Protobuf - Required by Google AI libraries
+protobuf>=4.21.0
+
+# Additional dependencies that might be needed
+# These are often pulled in automatically but listing for completeness
+
+# Six - Python 2 and 3 compatibility utilities
+six>=1.16.0
+
+# Certifi - SSL certificates bundle
+certifi>=2023.7.22
+
+# Charset-normalizer - Character encoding detection
+charset-normalizer>=3.2.0
+
+# Idna - Internationalized Domain Names
+idna>=3.4
+
+# Urllib3 - HTTP client
+urllib3>=2.0.0
